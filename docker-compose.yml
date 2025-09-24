@@ -6,15 +6,21 @@ services:
     ports:
       - '5000:5000'
     restart: always
+    environment:
+      - AUTH_ENV=production
   notes:
     build:
       context: ./service-notes
     ports:
       - '5001:5001'
     restart: always
+    environment:
+      - NOTES_ENV=production
   notifications:
     build:
       context: ./service-notifications
     ports:
       - '5002:5002'
     restart: always
+    environment:
+      - NOTIFICATIONS_ENV=production
