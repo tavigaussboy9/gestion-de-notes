@@ -3,6 +3,7 @@ services:
   auth:
     build:
       context: ./service-authentification
+    image: auth-service:latest
     ports:
       - '5000:5000'
     restart: always
@@ -11,6 +12,7 @@ services:
   notes:
     build:
       context: ./service-notes
+    image: notes-service:latest
     ports:
       - '5001:5001'
     restart: always
@@ -19,6 +21,7 @@ services:
   notifications:
     build:
       context: ./service-notifications
+    image: notifications-service:latest
     ports:
       - '5002:5002'
     restart: always
