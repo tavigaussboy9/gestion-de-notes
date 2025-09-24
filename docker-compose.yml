@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  auth:
+    build:
+      context: ./service-authentification
+    ports:
+      - '5000:5000'
+  notes:
+    build:
+      context: ./service-notes
+    ports:
+      - '5001:5001'
+  notifications:
+    build:
+      context: ./service-notifications
+    ports:
+      - '5002:5002'
