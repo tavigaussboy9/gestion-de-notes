@@ -5,13 +5,16 @@ services:
       context: ./service-authentification
     ports:
       - '5000:5000'
+    restart: always
   notes:
     build:
       context: ./service-notes
     ports:
       - '5001:5001'
+    restart: always
   notifications:
     build:
       context: ./service-notifications
     ports:
       - '5002:5002'
+    restart: always
